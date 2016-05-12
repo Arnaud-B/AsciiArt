@@ -10,8 +10,8 @@ public class AsciiBase {
     protected ArrayList<String> pattern1;
     protected ArrayList<String> pattern2;
 
-    public ArrayList<String> printAsciiPattern1() {
-
-    }
+//    public ArrayList<String> printAsciiPattern1() {
+//
+//    }
 
 }
