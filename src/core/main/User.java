@@ -3,13 +3,12 @@ package core.main;
 
 public class User
 {
-    private String input;
+    /**
+     * Launch program as User
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
 
-    public String getInput() {
-        return input;
-    }
-
-    public void setInput(String input) {
-        this.input = input.toUpperCase();
     }
 }
