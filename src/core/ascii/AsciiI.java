@@ -3,11 +3,12 @@ package core.ascii;
 
 import java.util.ArrayList;
 
-public class AsciiJI extends AsciiBase
+public class AsciiI extends AsciiBase
 {
-    public AsciiJI() {
+    public AsciiI() {
         this.realName = 'I';
         this.pattern1 = generatePattern1();
+        this.pattern2 = generatePattern2();
     }
 
     public ArrayList<String> generatePattern1() {

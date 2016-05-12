@@ -8,6 +8,7 @@ public class AsciiO extends AsciiBase
     public AsciiO() {
         this.realName = 'O';
         this.pattern1 = generatePattern1();
+        this.pattern2 = generatePattern2();
     }
 
     public ArrayList<String> generatePattern1() {

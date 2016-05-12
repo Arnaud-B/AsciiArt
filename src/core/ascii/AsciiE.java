@@ -8,6 +8,7 @@ public class AsciiE extends AsciiBase
     public AsciiE() {
         this.realName = 'E';
         this.pattern1 = generatePattern1();
+        this.pattern2 = generatePattern2();
     }
 
     public ArrayList<String> generatePattern1() {
