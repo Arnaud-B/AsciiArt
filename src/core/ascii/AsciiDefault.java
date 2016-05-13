@@ -13,11 +13,11 @@ public class AsciiDefault extends AsciiBase
 
     public ArrayList<String> generatePattern1() {
         ArrayList<String> result = new ArrayList<>();
-        result.add("###  ");
+        result.add("### ");
         result.add("  # ");
         result.add(" ## ");
         result.add("    ");
-        result.add("  # ");
+        result.add(" #  ");
         return result;
     }
 

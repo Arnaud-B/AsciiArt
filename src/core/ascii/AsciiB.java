@@ -17,7 +17,7 @@ public class AsciiB extends AsciiBase
         result.add("# # ");
         result.add("##  ");
         result.add("# # ");
-        result.add("## ");
+        result.add("##  ");
         return result;
     }
 
@@ -27,12 +27,12 @@ public class AsciiB extends AsciiBase
         result.add("#  #   ");
         result.add("#   #  ");
         result.add("#   #  ");
-        result.add("###   ");
-        result.add("#    ");
-        result.add("#  #   ");
+        result.add("####   ");
         result.add("#   #  ");
+        result.add("#    # ");
+        result.add("#    # ");
         result.add("#   #  ");
-        result.add("#  #  ");
+        result.add("####   ");
         return result;
     }
 }

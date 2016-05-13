@@ -26,8 +26,8 @@ public class AsciiX extends AsciiBase
         result.add("#    # ");
         result.add("#    # ");
         result.add("#    # ");
-        result.add(" #  # ");
-        result.add("  ##  ");
+        result.add(" #  #  ");
+        result.add("  ##   ");
         result.add("  ##   ");
         result.add(" #  #  ");
         result.add("#    # ");

@@ -23,16 +23,16 @@ public class AsciiA extends AsciiBase
 
     public ArrayList<String> generatePattern2() {
         ArrayList<String> result = new ArrayList<>();
-        result.add("  #    ");
-        result.add(" # #   ");
-        result.add("#   #  ");
-        result.add("#   #  ");
-        result.add("#   #  ");
-        result.add("#####  ");
-        result.add("#   #  ");
-        result.add("#   #  ");
-        result.add("#   #  ");
-        result.add("#   #  ");
+        result.add("  ##   ");
+        result.add(" #  #  ");
+        result.add("#    # ");
+        result.add("#    # ");
+        result.add("###### ");
+        result.add("#    # ");
+        result.add("#    # ");
+        result.add("#    # ");
+        result.add("#    # ");
+        result.add("#    # ");
         return result;
     }
 }

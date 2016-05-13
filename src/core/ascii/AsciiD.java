@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class AsciiD extends AsciiBase
 {
     public AsciiD() {
-        this.realName = 'M';
+        this.realName = 'D';
         this.pattern1 = generatePattern1();
         this.pattern2 = generatePattern2();
     }
