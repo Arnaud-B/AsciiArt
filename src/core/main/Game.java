@@ -16,10 +16,9 @@ public class Game
      * @param args  the program's options if any
      */
     public static void main(String[] args) {
-
         getRandomPattern();
+        printPattern();
         printAsciiArt(alphabet);
-
     }
 
     public static void getRandomPattern() {
@@ -30,6 +29,11 @@ public class Game
             AsciiBase.setWidth(7);
             AsciiBase.setHeight(10);
         }
+    }
+
+    public static void printPattern() {
+    	System.out.println("Width : "+AsciiBase.getWidth());
+    	System.out.println("Height : "+AsciiBase.getHeight());
     }
 
     public static void printAsciiArt(String text) {
@@ -56,6 +60,8 @@ public class Game
         for (String line : asciiTab) {
             System.out.println(line);
         }
+        System.out.println();
+        asciiTab.clear();
     }
 
     /**
