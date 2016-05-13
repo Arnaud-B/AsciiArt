@@ -3,7 +3,7 @@ apply plugin: 'eclipse'
 
 def libDir = file('libs')
 
-sourceCompatibility = 1.8
+sourceCompatibility = 1.5
 version = '1.0'
 jar {
     manifest {
