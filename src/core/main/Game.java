@@ -18,7 +18,9 @@ public class Game
     public static void main(String[] args) {
         getRandomPattern();
         printPattern();
-        printAsciiArt(alphabet);
+        System.out.println(alphabet);
+        generateAsciiArt(alphabet);
+        printAsciiArt();
     }
 
     public static void getRandomPattern() {
@@ -32,11 +34,11 @@ public class Game
     }
 
     public static void printPattern() {
-    	System.out.println("Width : "+AsciiBase.getWidth());
-    	System.out.println("Height : "+AsciiBase.getHeight());
+    	System.out.println("Width : " + AsciiBase.getWidth());
+    	System.out.println("Height : " + AsciiBase.getHeight());
     }
 
-    public static void printAsciiArt(String text) {
+    public static ArrayList<String> generateAsciiArt(String text) {
         text = transformText(text);
         for (int i = 0; i < AsciiBase.getHeight(); i++) {
             for (char c : text.toCharArray()) {
@@ -46,17 +48,20 @@ public class Game
                         letter = new AsciiDefault();
                     else
                         letter = (AsciiBase)Class.forName("core.ascii.Ascii" + c).newInstance();
+                    if (i >= asciiTab.size()) {
+                        asciiTab.add(AsciiBase.getWidth() == 4 ? letter.printAsciiPattern1().get(i) : letter.printAsciiPattern2().get(i));
+                    } else {
+                        asciiTab.set(i, asciiTab.get(i) + (AsciiBase.getWidth() == 4 ? letter.printAsciiPattern1().get(i) : letter.printAsciiPattern2().get(i)));
+                    }
                 } catch (Exception e) {
                     System.out.println("Can't load class");
-                    return;
-                }
-                if (i >= asciiTab.size()) {
-                    asciiTab.add(AsciiBase.getWidth() == 4 ? letter.printAsciiPattern1().get(i) : letter.printAsciiPattern2().get(i));
-                } else {
-                    asciiTab.set(i, asciiTab.get(i) + (AsciiBase.getWidth() == 4 ? letter.printAsciiPattern1().get(i) : letter.printAsciiPattern2().get(i)));
                 }
             }
         }
+        return asciiTab;
+    }
+
+    public static void printAsciiArt() {
         for (String line : asciiTab) {
             System.out.println(line);
         }
