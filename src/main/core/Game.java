@@ -47,7 +47,7 @@ public class Game
                     if (c == '?')
                         letter = new AsciiDefault();
                     else
-                        letter = (AsciiBase)Class.forName("core.ascii.Ascii" + c).newInstance();
+                        letter = (AsciiBase)Class.forName("main.ascii.Ascii" + c).newInstance();
                     if (i >= asciiTab.size()) {
                         asciiTab.add(AsciiBase.getWidth() == 4 ? letter.printAsciiPattern1().get(i) : letter.printAsciiPattern2().get(i));
                     } else {
