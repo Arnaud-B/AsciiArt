@@ -23,6 +23,9 @@ public class Game
         printAsciiArt();
     }
 
+    /**
+     * Sets a pattern randomly (4 by 5 or 7 by 10)
+     */
     public static void getRandomPattern() {
         if ((int)(Math.random() + 0.5) == 0) {
             AsciiBase.setWidth(4);
@@ -33,11 +36,20 @@ public class Game
         }
     }
 
+    /**
+     * Prints the pattern used to the screen
+     */
     public static void printPattern() {
     	System.out.println("Width : " + AsciiBase.getWidth());
     	System.out.println("Height : " + AsciiBase.getHeight());
     }
 
+    /**
+     * Generates The ASCII Art of the string passed
+     *
+     * @param text  the string used to generate the ASCII Art
+     * @return      the generated ASCII Art
+     */
     public static ArrayList<String> generateAsciiArt(String text) {
         text = transformText(text);
         for (int i = 0; i < AsciiBase.getHeight(); i++) {
@@ -61,21 +73,32 @@ public class Game
         return asciiTab;
     }
 
+    /**
+     * Prints the ASCII Art generated to the screen
+     */
     public static void printAsciiArt() {
         for (String line : asciiTab) {
             System.out.println(line);
         }
         System.out.println();
+        clearAsciiTab();
+    }
+
+    /**
+     * Clears the last generated ASCII Art
+     */
+    public static void clearAsciiTab() {
         asciiTab.clear();
     }
 
     /**
-     * Checks whether the string contains only letters or not and changes every non letter to a ?
+     * Checks whether the string contains only letters or not and changes every non letter to a "?"
      *
      * @param text  the string to test
-     * @return      the modified string (replacing all characters that is not a letter by ?
+     * @return      the modified string (replacing all characters that is not a letter by "?")
      */
     public static String transformText(String text) {
+        text = text.toUpperCase();
         return text.replaceAll("[^A-Z]", "?");
     }
 }
