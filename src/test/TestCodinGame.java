@@ -10,13 +10,16 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
+/**
+ * The Class TestCodinGame.
+ */
 public class TestCodinGame
 {
     private ArrayList<String> expectedAsciiManhattan = new ArrayList<>();
 
     /**
-     * Sets the program to use the first pattern
-     */
+	 * Sets the program to use the first pattern.
+	 */
     @Before
     public void testPrintPattern() {
         AsciiBase.setWidth(4);
@@ -58,8 +61,8 @@ public class TestCodinGame
     }
 
     /**
-     * Tests "MANHATTAN" all uppercase
-     */
+	 * Tests "MANHATTAN" all uppercase.
+	 */
     @Test
     public void testManhattanUppercase() {
         generateExpectedAsciiManhattan();

@@ -11,6 +11,11 @@ public class AsciiJ extends AsciiBase
         this.pattern2 = generatePattern2();
     }
 
+    /**
+	 * Generate pattern1.
+	 *
+	 * @return the array list
+	 */
     public ArrayList<String> generatePattern1() {
         ArrayList<String> result = new ArrayList<>();
         result.add(" ## ");

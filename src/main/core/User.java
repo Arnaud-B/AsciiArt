@@ -1,15 +1,26 @@
 package main.core;
 
+//import java.util.Scanner;
 import java.util.Random;
 
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class User.
+ */
 public class User
 {
+    
     /**
-     * Launch program as User
-     *
-     * @param args  the program's options if any
-     */
-    public static void main(String[] args) {     
+	 * Launch program as User.
+	 *
+	 * @param args
+	 *            the program's options if any
+	 */
+    public static void main(String[] args) { 
+    	//Scanner in = new Scanner(System.in);
+    	//System.out.print("Text: ");
+    	//String text = in.nextLine();
     	String text = GenerateRandStr(); 	
         Game.getRandomPattern();
         Game.printPattern();
@@ -20,6 +31,12 @@ public class User
         Game.printAsciiArt();
     }
     
+    
+    /**
+	 * Generate rand string.
+	 *
+	 * @return string
+	 */
     public static String GenerateRandStr() {
     	char[] chars = "abcdefghijklmnopqrstuvwxyz@יטאש.,;:!?".toCharArray();
     	StringBuilder sb = new StringBuilder();

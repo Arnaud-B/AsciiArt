@@ -10,13 +10,19 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestUnit.
+ */
 public class TestUnit
 {
+    
+    /** The ascii array. */
     private ArrayList<String> asciiArray = new ArrayList<>();
 
     /**
-     * Sets the program to use the first pattern
-     */
+	 * Sets the program to use the first pattern.
+	 */
     @Before
     public void testPrintPattern() {
         AsciiBase.setWidth(4);
@@ -24,16 +30,17 @@ public class TestUnit
     }
 
     /**
-     * Clears the Game's ASCII ArrayList for the next test
-     */
+	 * Clears the Game's ASCII ArrayList for the next test.
+	 */
     @After
     public void testClearAscii() {
         Game.clearAsciiTab();
     }
     
     /**
-     * Sets the expected ASCII Art for string "UPPERCASE" with the first pattern (4 by 5)
-     */
+	 * Sets the expected ASCII Art for string "UPPERCASE" with the first pattern
+	 * (4 by 5).
+	 */
     public void generateAsciiUppercase() {
 	    this.asciiArray.add("# # ##  ##  ### ##   ##  #   ## ### ");
 	    this.asciiArray.add("# # # # # # #   # # #   # # #   #   ");
@@ -43,8 +50,8 @@ public class TestUnit
     }
 
     /**
-     * Tests only one specialChar
-     */
+	 * Tests only one specialChar.
+	 */
     @Test
     public void testSpecialChar() {
         ArrayList<String> specialChar = new ArrayList<>();
@@ -57,8 +64,8 @@ public class TestUnit
     }
 
     /**
-     * Tests uppercase
-     */
+	 * Tests uppercase and lowercase mixed.
+	 */
     @Test
     public void testUppercase1() {
     	generateAsciiUppercase();
@@ -66,8 +73,8 @@ public class TestUnit
     }
     
     /**
-     * Tests uppercase
-     */
+	 * Tests uppercase.
+	 */
     @Test
     public void testUppercase2() {
     	generateAsciiUppercase();
@@ -75,8 +82,9 @@ public class TestUnit
     }
 
     /**
-     * Tests "ùpµ€rc@sé" using special characters that should be replaced by "?"
-     */
+	 * Tests "ùpµ€rc@sé" using special characters that should be replaced by
+	 * "?".
+	 */
     @Test
     public void testWordSpecialChar() {
         this.asciiArray.clear();
@@ -89,8 +97,9 @@ public class TestUnit
     }
 
     /**
-     * Tests "ùpµ€rc@sé" using special characters that should be replaced by "?" with the second pattern (7 by 10)
-     */
+	 * Tests "ùpµ€rc@sé" using special characters that should be replaced by "?"
+	 * with the second pattern (7 by 10).
+	 */
     @Test
     public void testWordPattern2() {
         AsciiBase.setWidth(7);
