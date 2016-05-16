@@ -33,9 +33,7 @@ public class Game
     }
 
     /**
-	 * Sets a pattern randomly (4 by 5 or 7 by 10).
-	 *
-	 * @return the random pattern
+	 * Sets a pattern randomly (4 by 5 or 7 by 10)
 	 */
     public static void getRandomPattern() {
         if ((int)(Math.random() + 0.5) == 0) {
